@@ -1,8 +1,19 @@
+*{
+  margin: 0%;
+}
+body {
+  width: 100vw;
+  color: black;
+}
 .header {
-  padding: 20px;
+  width: 100vw;
+  height: 60vh;
+  /* padding: 20px; */
   text-align: center;
-  background: #f8a516;
-  color: rgb(255, 255, 255);
+  background-image: url('Home Image.png');
+  background-size:115%;
+  background-repeat: no-repeat;
+  /* color: rgb(255, 255, 255); */
   overflow: hidden; /* Hide the overflowed text */
 }
 
@@ -10,7 +21,8 @@
 .header h1 {
   position: relative; /* Position the text relative to the header */
   animation: slide-in 3s ease-out; /* Apply the animation */
-  
+  color: rgb(8, 5, 8);
+  font-size: 60px;
 }
 
 /* Define the animation */
@@ -31,7 +43,7 @@ background-color: #290131;
 display: flex;
 flex-direction: row;
 justify-content: space-around;
-
+width: 100%;
 }
 
 /* Style the navigation bar links */
@@ -39,9 +51,11 @@ justify-content: space-around;
 display: flex;
 justify-content: space-around;
 color: white;
+font-size: x-large;
 text-align: center;
 padding: 14px 20px;
 text-decoration: none;
+border-radius: 5%;
 }
 
 /* Change color on hover */
@@ -57,11 +71,11 @@ overflow: hidden;
 }
 
 /* Style the dropdown button to fit inside the navbar */
-.dropdown .dropbtn {
+.dropdown .services {
 font-size: 16px;
 border: none;
 outline: none;
-color: white;
+color: rgb(140, 6, 140);
 padding: 14px 20px;
 background-color: inherit;
 font-family: inherit;
@@ -72,7 +86,7 @@ margin: 0;
 .dropdown-content {
 display: none;
 position: absolute;
-background-color: #f9f9f9;
+background-color: #a4108e;
 min-width: 160px;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 z-index: 1;
