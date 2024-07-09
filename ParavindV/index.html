@@ -3,47 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pandit Services</title>
+    <title>Indian Pandit Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p></p>
     <nav>
-        <ul>
+        <div class="logo">
+            <a href="#">Pandit Services</a>
+        </div>
+        <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
             <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#blog">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#login">Login</a></li>
-            <li><a href="#feedback">Feedback</a></li>
         </ul>
+        <div class="cta">
+            <a href="#book-now" class="btn">Book Now</a>
+        </div>
     </nav>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="login.php" method="post">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-            
-            <button type="submit">Login</button>
-        </form>
-    </div>
-    <div class="feedback-container">
-        <h2>Feedback</h2>
-        <form action="feedback.php" method="post">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Submit</button>
-        </form>
-    </div>
 </body>
 </html>

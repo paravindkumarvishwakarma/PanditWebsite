@@ -5,66 +5,50 @@ body {
 }
 
 nav {
-    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff9800;
+    padding: 1rem 2rem;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: white;
+nav .logo a {
     text-decoration: none;
-    padding: 14px 20px;
-    display: inline-block;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    background-color: #575757;
+nav .nav-links {
+    list-style: none;
+    display: flex;
 }
 
-.login-container, .feedback-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
+nav .nav-links li {
+    margin: 0 1rem;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: #f57c00;
+}
+
+nav .cta .btn {
+    background-color: #fff;
+    color: #ff9800;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.login-container h2, .feedback-container h2 {
-    text-align: center;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-}
-
-input[type="text"], input[type="email"], input[type="password"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #575757;
+nav .cta .btn:hover {
+    background-color: #f57c00;
+    color: #fff;
 }
