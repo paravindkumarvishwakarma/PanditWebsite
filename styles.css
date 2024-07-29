@@ -1,5 +1,6 @@
 *{
   margin: 0%;
+  padding: 0%;
 }
 body {
   width: 100vw;
@@ -13,10 +14,15 @@ body {
   background-image: url('Home Image.png');
   background-size:115%;
   background-repeat: no-repeat;
+  display: flex;
   /* color: rgb(255, 255, 255); */
   overflow: hidden; /* Hide the overflowed text */
 }
 
+.header #home-logo{
+  position: absolute;
+  padding-left: 2%;
+}
 /* Style the header text */
 .header h1 {
   position: relative; /* Position the text relative to the header */
@@ -24,6 +30,7 @@ body {
   color: rgb(242, 242, 242);
   /* box-shadow: 120px 80px 0px 0px rgba(173, 15, 162, 0.2); */
   font-size: 60px;
+  margin-top: 2%;
 }
 
 /* Define the animation */
@@ -87,7 +94,7 @@ margin: 0;
 .dropdown-content {
 display: none;
 position: absolute;
-background-color: #a4108e;
+background-color:  #290131;
 min-width: 160px;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 z-index: 1;
