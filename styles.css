@@ -116,7 +116,7 @@ display: block;
 
 /* Style the main content */
 .main {
-margin-left: 160px; /* Same width as the sidebar */
+/* margin-left: 160px; Same width as the sidebar */
 padding: 0px 10px;
 }
 
@@ -146,4 +146,33 @@ padding-top: 60px;
 .main {
   margin-left: 0;
 }
+}
+#home-RudraAbishek-Photo{
+  width: 100vw;
+  height: 65vh;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+#home-RudraAbishek-Photo #homeRudraAbishek{
+  width: 60%;
+  height: 70vh;
+  margin-left: 20%;
+  border-radius: 10px;
+}
+#home-RudraAbishek-Photo button{
+  width: 30%;
+  padding: 8px 50px;
+  margin-top: -3%;
+  background-color: black;
+  color: white;
+  font-size: xx-large;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-left: 37%;
+  border-color: transparent;
+}
+#home-RudraAbishek-Photo button:hover{
+  color: black;
+  background-color: white;
 }
