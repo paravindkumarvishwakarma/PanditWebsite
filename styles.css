@@ -154,7 +154,8 @@ padding-top: 60px;
 /* Responsive layout - makes the sidebar and the main content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 800px) {
 .main {
-  margin-left: 0;
+  margin: 0px;
+  padding: 0px;
 }
 }
 /* #home-RudraAbishek-Photo{
@@ -164,7 +165,7 @@ padding-top: 60px;
   display: flex;
   flex-direction: column;
 } */
-#home-RudraAbishek-Photo #homeRudraAbishek{
+/* #home-RudraAbishek-Photo #homeRudraAbishek{
   width: 60%;
   height: 70vh;
   margin-left: 20%;
@@ -172,83 +173,57 @@ padding-top: 60px;
   margin-top: 2%;
   display: flex;
   flex-direction: row;
-}
+} */
 
-.slowFade {
+#slider {
   display: flex;
-  align-items: flex-start;
-  background: #fff;
-  height: 100vh;
+  /* justify-content: center; */
+  align-items: center;
+  position: relative;
+  width: 99vw;
+  min-height: 600px;
   overflow: hidden;
-  position: relative;
-}
-
-.slowFade .slide img{
-  position: absolute;
-  min-width: 50%;
-  min-height: 50%;
-  height: auto;
-  background: #000;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  opacity: 0;
-  /* transform: scale(1.5) rotate(15deg); */
-  animation: slowFade 32s infinite;
-}
-
-.slowFade button{
-  min-width: 20%;
-  min-height: 10%;
-  padding: 4px 10px;
-  margin-top: 35%;
-  background-color: #290131;
-  color: white;
-  font-size: xx-large;
-  font-weight: bold;
-  border-radius: 10px;
-  margin-left: 37%;
-  /* border-color: transparent; */
-  position: relative;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  opacity: 0;
-  animation: slowFade 32s infinite;
-}
-#home-RudraAbishek-Photo button:hover{
-  color: #290131;
-  background-color: white;
-}
-
-/* Define animation delays for each slide */
-.slowFade .slide:nth-child(3) img{
-  animation-delay: 8s;
-}
-.slowFade .slide:nth-child(2) img{
-  animation-delay: 16s;
-}
-.slowFade .slide:nth-child(1) img{
-  animation-delay: 32s;
-}
-
-/* Define animation delays for each slide */
-.slide #button1 {
-  animation-delay: 8s;
-  /* margin-left: 97%; */
 
 }
-.slide #button2 {
-  animation-delay: 16s;
-}
-.slide #button3 {
-  animation-delay: 32s;
+
+#slider img {
+  width: 60%;
+  height: 505px;
+  margin-left: 500px; /* Set initial margin */
+  transition: margin-left 5s ease-in-out; /* Add transition effect */
 }
 
-@keyframes slowFade {
-  25% {
-    opacity: 1;
-    transform: scale(1) rotate(0);
-  }
-  40% {
-    opacity: 0;
-  }
+#prev,
+#next {
+    position: absolute;
+    top: 100%;
+    /* transform: translateY(-40%); */
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #290131;
+    border-radius: 10px;
+    cursor: pointer;
 }
+
+#prev {
+    left: 20px;
+}
+
+#next {
+    right: 20px;
+}
+
+/* <div class="slide" id="home-RudraAbishek-Photo">
+<img id="homeRudraAbishek" src="RudraAbishek Photo.png" >
+<!-- <button id="button1">RudraAbishek 1</button> -->
+</div>
+<div class="slide" id="home-RudraAbishek-Photo">
+<img id="homeRudraAbishek" src="RudraAbishek Photo.png" >
+<!-- <button id="button2">RudraAbishek 2</button> -->
+</div>
+<div class="slide" id="home-RudraAbishek-Photo">
+<img id="homeRudraAbishek" src="RudraAbishek Photo.png" >
+<!-- <button id="button3">RudraAbishek 3</button> -->
+</div> */

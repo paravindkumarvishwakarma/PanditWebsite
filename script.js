@@ -1,49 +1,56 @@
-// let sliderImages = document.querySelectorAll(".slide"),
-// 	arrowLeft = document.querySelector("#arrow-left"),
-// 	arrowRight = document.querySelector("#arrow-right"),
-// 	current = 0;
+const images = [
+    'RudraAbishek Photo.png',
+    'lord_Shiva.png',
+    'Kashi_Temple.png'
+];
 
-// // Clear all images
-// function reset() {
-// 	for (let i = 0; i < sliderImages.length; i++) {
-// 		sliderImages[i].style.display = "none";
-// 	}
-// }
+const slider = document.getElementById('slider');
+const imageElement = document.createElement('img');
+let currentIndex = 0;
 
-// // Initial slide
-// function startSlide() {
-// 	reset();
-// 	sliderImages[0].style.display = "block";
-// }
+function loadNextImage() {
+    imageElement.style.opacity = 0; // Hide the current image
+    imageElement.src = images[currentIndex];
+    currentIndex = (currentIndex + 1) % images.length;
+    imageElement.onload = () => {
+        imageElement.style.opacity = 1; // Show the new image
+        imageElement.style.marginLeft = '300px'; // Set desired margin
 
-// // Show previous
-// function slideLeft() {
-// 	reset();
-// 	sliderImages[current - 1].style.display = "block";
-// 	current--;
-// }
+        imageElement.style.transition = 'margin-left 2s ease-in-out'; // Add transition effect
+        
+        // Reset transition after the image loads
+        setTimeout(() => {
+            imageElement.style.transition = '';
+        }, 2);
 
-// // Show next
-// function slideRight() {
-// 	reset();
-// 	sliderImages[current + 1].style.display = "block";
-// 	current++;
-// }
+        // Load the next image after 2 seconds
+        setTimeout(loadNextImage, 4000);
+    };
+}
 
-// // Left arrow click
-// arrowLeft.addEventListener("click", function () {
-// 	if (current === 0) {
-// 		current = sliderImages.length;
-// 	}
-// 	slideLeft();
-// });
+// Preload the first image
+imageElement.onload = loadNextImage;
+loadNextImage();
 
-// // Right arrow click
-// arrowRight.addEventListener("click", function () {
-// 	if (current === sliderImages.length - 1) {
-// 		current = -1;
-// 	}
-// 	slideRight();
-// });
+// Add the image to the slider
+slider.appendChild(imageElement);
 
-// startSlide();
+// Function to show the previous image
+function showPrevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    imageElement.src = images[currentIndex];
+    loadNextImage(); // Load the next image after showing the previous one
+
+}
+
+// Function to show the next image
+function showNextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    imageElement.src = images[currentIndex];
+    loadNextImage(); // Load the next image after showing it
+
+}
+
+// Attach event listeners to the buttons
+document.getElementById('prev').addEventListener('click', showPrevImage);
+document.getElementById('next').addEventListener('click', showNextImage);
