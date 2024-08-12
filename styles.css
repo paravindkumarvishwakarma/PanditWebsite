@@ -49,11 +49,13 @@ body {
 /* Style the top navigation bar */
 #navbar {
 overflow: hidden;
-background-color: #290131;
+/* background-color: #290131; */
+background-color: rgb(103, 10, 10);
 display: flex;
 flex-direction: row;
 justify-content: space-around;
 width: 100vw;
+
 z-index: 2;
 }
 
@@ -97,16 +99,16 @@ margin: 0;
 .dropdown-content {
 display: none;
 position: absolute;
-background-color:  #290131;
+background-color:  rgb(103, 10, 10);
 min-width: 160px;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
+z-index: 3;
 }
 
 /* Style the links inside the dropdown menu */
 .dropdown-content a {
-float: none;
-position: relative;
+/* float: none; */
+/* position: relative; */
 color: black;
 padding: 12px 16px;
 text-decoration: none;
@@ -122,42 +124,213 @@ background-color: #ddd;
 /* Show the dropdown menu when the user moves the mouse over the dropdown button */
 .dropdown:hover .dropdown-content {
 display: block;
+/* position:sticky; */
 }
 
 /* Style the main content */
-.main {
-/* margin-left: 160px; Same width as the sidebar */
-padding: 0px 10px;
+#Service_List{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin: 0%;
+  padding: 0%;
 }
 
+#Service_List .Service-Header{
+  width: 100wv;
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  color: white;
+  background-image: url("service header background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#Service_List .Service-Header div{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+#Service_List .Service-Header h1{
+  width: 100wv;
+  display: flex;
+  font-size:40px;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#Service_List .Service-Header h3{
+  width: 100wv;
+  display: flex;
+  font-size: larger;
+  padding: 1%;
+}
+
+#Service_List form {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 38px;
+}
+/* Style the search box inside the navigation bar */
+#Service_List form input[type=text] {
+  width: 35vw;
+  padding: 8px 0px;
+  font-size: 17px;
+  text-align: left;
+  border-radius: 4px;
+}
+
+#Service_List button {
+  width: 3vw;
+  padding: 6px 3px;
+  /* background: #ddd; */
+  font-size: 17px;
+  color: black;
+  /* border: none; */
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#Service_List button:hover {
+  background: #ccc;
+}
+
+#Service_List .Image-Services{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: space-around;
+  padding: 0% 8%;
+}
+
+#Service_List .Image-Services div{
+  display: flex;
+  flex-direction: column;
+  margin: 2% 0.8%;
+  
+  /* background-color: aqua; */
+}
+
+#Service_List .Image-Services div img{
+  display: flex;
+  border-radius: 50%;
+  /* padding: 4% 0%; */
+}
+#Service_List .Image-Services div a{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8% 0.8%;
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  font-size: x-large;
+  justify-content: center;
+  background-color: rgb(103, 10, 10);
+  border-radius: 5%;
+
+}
 /* Style the footer */
 .footer {
-padding: 20px;
+/* padding: 20px; */
 text-align: center;
 background: #ddd;
 }
-/* Page content */
-.content {
-padding: 16px;
-}
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-position: fixed;
-top: 0;
-width: 100%;
-}
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
+.sticky + .main {
 padding-top: 60px;
 }
-/* Responsive layout - makes the sidebar and the main content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width: 800px) {
-.main {
-  margin: 0px;
-  padding: 0px;
+
+/* Style the top navigation bar */
+.sticky {
+  overflow: hidden;
+  background-color: #290131;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  z-index: 2;
 }
+
+/* Style the navigation bar links */
+.sticky a {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-size: x-large;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  border-radius: 5%;
 }
+
+/* Change color on hover */
+.sticky a:hover {
+  background-color: #ddd;
+  color: black;
+}
+  
+  /* Style the dropdown button to fit inside the navbar */
+.sticky .dropdown .services {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: rgb(140, 6, 140);
+  padding: 14px 20px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  }
+
+  /* Style the dropdown menu */
+.sticky .services {
+  float: left;
+  overflow:hidden;
+  }
+
+  /* Style the dropdown content (hidden by default) */
+.sticky .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:  #290131;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3;
+  }
+  
+  /* Style the links inside the dropdown menu */
+.sticky .dropdown-content a {
+  /* position: absolute; */
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: left;
+  }
+  
+  /* Add a background color on hover */
+.sticky .dropdown-content a:hover {
+  background-color: #ddd;
+  display: inline-block;
+  }
+  
+  /* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.sticky .dropdown:hover .dropdown-content {
+  display: block;
+  position:fixed;
+  margin-top: -26.5%;
+  }
+  
 /* #home-RudraAbishek-Photo{
   width: 100vw;
   height: 65vh;
@@ -175,45 +348,76 @@ padding-top: 60px;
   flex-direction: row;
 } */
 
-#slider {
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
+/* Main Image */
+
+.slider_main {
+  height: 520px; /* Adjust height as needed */
+  margin: auto;
+  width: 90%;
+  display: grid;
+  place-items: center;
   position: relative;
-  width: 99vw;
-  min-height: 600px;
   overflow: hidden;
+}
+
+.slide_track_main {
+  display: flex;
+  width: calc(500px * 6); /* Adjust width for duplicated slides */
+  animation: scrollmain 36s linear infinite; /* Adjusted duration for the pause */
 
 }
 
-#slider img {
-  width: 60%;
-  height: 505px;
-  margin-left: 500px; /* Set initial margin */
-  transition: margin-left 5s ease-in-out; /* Add transition effect */
+@keyframes scrollmain {
+  0% {
+    transform: translateX(0);
+  }
+  16.67%, 27.78% {
+    transform: translateX(calc(-500px * 1)); /* Hold first image */
+  }
+  44.45%, 55.56% {
+    transform: translateX(calc(-500px * 2)); /* Hold second image */
+  }
+  72.23%, 83.34% {
+    transform: translateX(calc(-500px * 3)); /* Hold third image */
+  }
+  100% {
+    transform: translateX(calc(-500px * 3)); /* End of animation */
+  }
 }
 
-#prev,
-#next {
-    position: absolute;
-    top: 100%;
-    /* transform: translateY(-40%); */
-    font-size: 35px;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    background-color: #290131;
-    border-radius: 10px;
-    cursor: pointer;
+.slider_main:hover .slide_track_main {
+  animation-play-state: paused;
 }
 
-#prev {
-    left: 20px;
+.slide_main {
+  width: 500px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  padding:0px 55px;
+  perspective:100px;
 }
 
-#next {
-    right: 20px;
+.slide_main img {
+  width: 100%;
+  transition: transform 1s;
+  border-radius: 40px;
+
 }
+
+img {
+  transition: transform 1s;
+}
+
+
+.slide_track_main .slide img {
+  animation: scale 5s linear infinite; /* Adjust duration to match scroll */
+}
+
+img:hover {
+  transform: translateZ(20px);
+}
+
 
 /* <div class="slide" id="home-RudraAbishek-Photo">
 <img id="homeRudraAbishek" src="RudraAbishek Photo.png" >
@@ -227,3 +431,97 @@ padding-top: 60px;
 <img id="homeRudraAbishek" src="RudraAbishek Photo.png" >
 <!-- <button id="button3">RudraAbishek 3</button> -->
 </div> */
+
+/* styles.css */
+/* body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+} */
+
+
+.slider-footer {
+  height: 350px; /* Adjust height as needed */
+  margin: auto;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  /* margin: 10px 0px; */
+}
+
+.slide-track {
+  display: flex;
+  width: calc(700px * 32); /* Adjust width for duplicated slides */
+  animation: scroll 90s linear infinite;
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-700px * 16)); /* Adjust for original slides */
+  }
+}
+
+.slide {
+  width: 700px;
+  height: 350px;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  perspective: 100px;
+}
+
+.slide img {
+  width: 100%;
+  transition: transform 1s;
+  border-radius: 40px;
+  padding: 20px;
+
+}
+
+.slide a {
+  display: flex;
+  width:max-content;
+  margin-top: -10%;
+  overflow: auto;
+  z-index: 5;
+  color: white;
+  background-color: rgb(103, 10, 10);
+  text-decoration: none;
+  font-size: larger;
+}
+
+img:hover{
+  transform: translateZ(20px);
+}
+
+
+.slider-footer::before,
+.slider-footer::after {
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+.slider-footer::before {
+  left: 0;
+  top: 0;
+}
+
+.slider-footer::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
