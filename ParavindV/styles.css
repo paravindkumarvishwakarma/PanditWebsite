@@ -5,19 +5,19 @@
 
 }
 body {
+  margin: 0%;
+  padding: 0%;
   width: 100vw;
   color: black;
 }
 .header {
   width: 100vw;
   height: 60vh;
-  /* padding: 20px; */
   text-align: center;
   background-image: url('Home Image.png');
   background-size:115%;
   background-repeat: no-repeat;
   display: flex;
-  /* color: rgb(255, 255, 255); */
   overflow: hidden; /* Hide the overflowed text */
 }
 
@@ -25,6 +25,7 @@ body {
   position: absolute;
   padding-left: 2%;
 }
+
 /* Style the header text */
 .header h1 {
   position: relative; /* Position the text relative to the header */
@@ -49,13 +50,11 @@ body {
 /* Style the top navigation bar */
 #navbar {
 overflow: hidden;
-/* background-color: #290131; */
 background-color: rgb(103, 10, 10);
 display: flex;
 flex-direction: row;
 justify-content: space-around;
 width: 100vw;
-
 z-index: 2;
 }
 
@@ -107,8 +106,6 @@ z-index: 3;
 
 /* Style the links inside the dropdown menu */
 .dropdown-content a {
-/* float: none; */
-/* position: relative; */
 color: black;
 padding: 12px 16px;
 text-decoration: none;
@@ -213,20 +210,18 @@ display: block;
 #Service_List .Image-Services div{
   display: flex;
   flex-direction: column;
-  margin: 2% 0.8%;
-  
-  /* background-color: aqua; */
+  margin: 2% 1%;
 }
 
 #Service_List .Image-Services div img{
   display: flex;
   border-radius: 50%;
-  /* padding: 4% 0%; */
+  width: 330px;
 }
 #Service_List .Image-Services div a{
   display: flex;
   flex-wrap: wrap;
-  padding: 8% 0.8%;
+  padding: 8% 0%;
   color: white;
   list-style: none;
   text-decoration: none;
@@ -235,12 +230,6 @@ display: block;
   background-color: rgb(103, 10, 10);
   border-radius: 5%;
 
-}
-/* Style the footer */
-.footer {
-/* padding: 20px; */
-text-align: center;
-background: #ddd;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
@@ -477,7 +466,7 @@ img:hover {
   padding: 20px;
   flex-direction: column;
   align-items: center;
-  perspective: 100px;
+  perspective:150px;
 }
 
 .slide img {
@@ -524,4 +513,70 @@ img:hover{
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
+}
+
+
+/* Style the footer */
+.footer {
+  display: flex;
+  width: 100vw;
+  text-align: center;
+  justify-content: space-around;
+  margin-top: 2%;
+  }
+.footer-main {
+  display: flex;
+  width: 94vw;
+  justify-content: space-around;
+  line-height: 28px;
+  list-style: none;
+}
+
+.footer-main a,p{
+  text-decoration: none;
+  color: rgb(110, 109, 109);
+}
+.footer-main h2{
+  margin-bottom: 4%;
+}
+.footer-main .left-footer{
+  text-align: left;
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+.footer-main .left-footer img{
+  width: 40%;
+}
+
+.footer-main .middle-footer-1{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-main .middle-footer-2{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-main .right-footer{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-main .right-footer .Contact-Us-Footer{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-main .right-footer .Address{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3%;
 }
