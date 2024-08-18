@@ -18,19 +18,25 @@ body {
   background-size:115%;
   background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
   overflow: hidden; /* Hide the overflowed text */
+  justify-content: space-between;
+  align-items: center;
 }
-
+.header .header-Logo_Name{
+  width: 100%;
+}
 .header #home-logo{
   position: absolute;
   padding-left: 2%;
+  width: 15%;
 }
 
 /* Style the header text */
-.header h1 {
+.header .header-Logo_Name h1 {
   position: relative; /* Position the text relative to the header */
   animation: slide-in 3s ease-out; /* Apply the animation */
-  color: rgb(242, 242, 242);
+  color: rgb(103, 10, 10);
   /* box-shadow: 120px 80px 0px 0px rgba(173, 15, 162, 0.2); */
   font-size: 60px;
   margin-top: 2%;
@@ -45,6 +51,86 @@ body {
   left: 50%; /* Stop at the middle of the header */
   transform: translateX(-50%); /* Center the text */
   }
+}
+
+.header .header-Book{
+  /* background-color: aquamarine; */
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 290px;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+}
+
+.header-Book-Left{
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: space-around;
+  text-align: left;
+  color: white;
+}
+
+.header-Book-Left h1{
+  font-size: 50px;
+}
+
+.header-Book-Left-Top{
+  display: flex;
+  flex-direction: column;
+  font-size: 23px;
+}
+
+.header-Book-Left-Top a{
+  display: flex;
+  text-decoration: none;
+  color: white;
+  height: 30px;
+}
+.header-Book-Left-Bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-Book-Left-Bottom p{
+  color: rgb(213, 200, 200);
+  padding: 3px;
+  font-size: large;
+}
+
+.header-Book-Right{
+  display: flex;
+  height: 280px;
+  width: 40%;
+}
+.header-Book-Right-Form{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* background-color: black; */
+}
+.header-Book-Right-Form .header-Book-Right-Form-Contact{
+  display: flex;
+  padding: 15px 0px;
+}
+.header-Book-Right-Form .header-Book-Right-Form-Contact input{
+  width: 65%;
+  padding: 15px 5px;
+}
+.header-Book-Right-Form button{
+  width: 30%;
+  margin-top: 5%;
+  padding: 15px 0px;
+  border-radius: 5px;
+  font-size: large;
+  margin-left: -30%;
+}
+.header-Book-Right-Form button:hover{
+  background-color: rgb(103, 10, 10);
+  color: aliceblue;
 }
 
 /* Style the top navigation bar */
@@ -387,6 +473,27 @@ padding-top: 60px;
   perspective:100px;
 }
 
+.slider_main::before,
+.slider_main::after {
+  background: linear-gradient(to right, rgba(255,255,255,1) 3%, rgba(255,255,255,0) 100%);
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 1;
+}
+
+.slider_main::before {
+  left: 0;
+  top: 0;
+}
+
+.slider_main::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
 .slide_main img {
   width: 100%;
   transition: transform 1s;
@@ -430,14 +537,19 @@ img:hover {
 
 
 .slider-footer {
-  height: 350px; /* Adjust height as needed */
-  margin: auto;
+  height: 360px; /* Adjust height as needed */
+  margin: 5%;
   width: 90%;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   place-items: center;
   position: relative;
   overflow: hidden;
   /* margin: 10px 0px; */
+}
+
+.slider-footer h1{
+  font-size: xx-large;
 }
 
 .slide-track {
